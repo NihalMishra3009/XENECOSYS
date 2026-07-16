@@ -85,14 +85,19 @@ Screenshots of XenHub admin interface:
 XENECOSYS/
 ├── .github/
 │   └── workflows/
-│       └── xencomm-release.yml          # Automated XenComm release builds
-├── APP.UI/                              # Mobile UI Screenshots
+│       └── xencomm-release.yml                      # CI/CD release automation
+│
+├── docs/                                            # Documentation (optional)
+│   └── architecture-diagrams/
+│
+├── APP.UI/                                          # Mobile App Screenshots
 │   ├── Broadcast.jpg
 │   ├── Contact.jpg
 │   ├── Homes.jpg
 │   ├── Others.jpg
 │   └── Schedule.jpg
-├── Software.UI/                         # Hub Dashboard UI Screenshots
+│
+├── Software.UI/                                     # Hub Dashboard Screenshots
 │   ├── Dashboard.png
 │   ├── DTN.png
 │   ├── Emergency broadcast.png
@@ -100,33 +105,52 @@ XENECOSYS/
 │   ├── Queue.png
 │   ├── Relay.png
 │   └── User.png
-├── XenComm/                             # User Mobile Application
+│
+├── XenComm/                                         # Mobile App (Flutter)
+│   ├── pubspec.yaml                                 # Dependencies
+│   ├── analysis_options.yaml                        # Linter config
 │   ├── README.md
 │   ├── LICENSE
-│   └── Xencomm/
-│       ├── lib/
-│       │   ├── core/                    # App-wide constants and utils
-│       │   ├── models/                  # User, Hub, Mule, Message, Bundle
-│       │   ├── services/                # SQLite, Crypto, Notifications
-│       │   ├── ui/                      # 11+ Screens (Chat, Simulator)
-│       │   └── simulation/              # DTN visualization logic
-│       ├── assets/                      # App assets and resources
-│       ├── android/                     # Native Android platform channels
-│       ├── ios/                         # iOS platform build files
-│       ├── web/                         # Web platform build files
-│       ├── linux/                       # Linux platform build files
-│       ├── macos/                       # macOS platform build files
-│       ├── windows/                     # Windows platform build files
-│       └── test/                        # Unit and widget tests
-├── XenHub/                              # Desktop/Admin Hub Application
-│   ├── README.md
-│   ├── pubspec.yaml
-│   ├── lib/                             # API server & dashboard logic
+│   ├── lib/
+│   │   ├── core/                                    # Constants, config, utils
+│   │   ├── models/                                  # Data models
+│   │   ├── services/                                # SQLite, Crypto, Notifications
+│   │   ├── ui/
+│   │   │   ├── screens/                             # Chat, Broadcast, Contact, etc
+│   │   │   ├── widgets/                             # Reusable components
+│   │   │   └── themes/                              # Material 3 design
+│   │   ├── simulation/                              # DTN visualization
+│   │   └── main.dart
+│   ├── assets/                                      # Images, fonts, data files
 │   ├── android/
-│   ├── windows/                         # Desktop target build files
-│   └── test/                            # Tests
-├── LICENSE
-└── README.md
+│   ├── ios/
+│   ├── web/
+│   ├── linux/
+│   ├── macos/
+│   ├── windows/
+│   └── test/                                        # Unit & widget tests
+│
+├── XenHub/                                          # Hub Admin App (Flutter)
+│   ├── pubspec.yaml                                 # Dependencies
+│   ├── analysis_options.yaml                        # Linter config
+│   ├── README.md
+│   ├── LICENSE
+│   ├── lib/
+│   │   ├── core/                                    # Constants, utils
+│   │   ├── models/                                  # Hub, Bundle, User models
+│   │   ├── services/                                # API, Database, Crypto
+│   │   ├── ui/
+│   │   │   ├── screens/                             # Dashboard, Queue, Relay, User
+│   │   │   ├── widgets/                             # Reusable components
+│   │   │   └── themes/                              # Material 3 design
+│   │   └── main.dart
+│   ├── assets/                                      # Icons, images
+│   ├── android/
+│   ├── windows/
+│   └── test/                                        # Tests
+│
+├── LICENSE                                          # Project license
+└── README.md                                        # Project root README
 
 
 ---
@@ -138,7 +162,7 @@ XENECOSYS/
 
 ### XenComm (Mobile APK)
 bash
-cd XenComm/Xencomm
+cd XenComm
 flutter pub get
 flutter pub run build_runner build  # Generate JSON serialization
 flutter build apk --release
