@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../features/dashboard/presentation/dashboard_page.dart';
@@ -45,6 +48,11 @@ class _XenHubShellState extends State<XenHubShell>
           ),
         ),
         actions: [
+          IconButton(
+            tooltip: 'Debug report',
+            onPressed: _showDebugReport,
+            icon: const Icon(Icons.bug_report_outlined),
+          ),
           Padding(
             padding: const EdgeInsets.only(right: 16),
             child: TextButton.icon(
@@ -252,6 +260,58 @@ class _XenHubShellState extends State<XenHubShell>
           ],
         ),
       ),
+    );
+  }
+
+  Future<void> _showDebugReport() async {
+    final report = StringBuffer()
+      ..writeln('XenHub Debug Report')
+      ..writeln('Generated: ${DateTime.now().toIso8601String()}')
+      ..writeln('Current tab: ${_controller.index}')
+      ..writeln('API port: ${Platform.environment['XENHUB_API_PORT'] ?? '8080'}')
+      ..writeln('Debug mode: $kDebugMode')
+      ..writeln('Platform: ${defaultTargetPlatform.name}');
+
+    if (!mounted) {
+      return;
+    }
+
+    final text = report.toString();
+    await showDialog<void>(
+      context: context,
+      builder: (dialogContext) {
+        return AlertDialog(
+          backgroundColor: const Color(0xFF101A29),
+          surfaceTintColor: Colors.transparent,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(24),
+            side: BorderSide(
+              color: const Color(0xFF4B6A86).withValues(alpha: 0.45),
+            ),
+          ),
+          title: const Text('Debug Report'),
+          content: SizedBox(
+            width: 480,
+            child: SelectableText(
+              text,
+              style: const TextStyle(color: Color(0xFFEAF6FF)),
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Clipboard.setData(ClipboardData(text: text));
+                Navigator.pop(dialogContext);
+              },
+              child: const Text('Copy'),
+            ),
+            FilledButton(
+              onPressed: () => Navigator.pop(dialogContext),
+              child: const Text('Close'),
+            ),
+          ],
+        );
+      },
     );
   }
 }
