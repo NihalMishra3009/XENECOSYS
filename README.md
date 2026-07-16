@@ -24,6 +24,14 @@ Decentralised, infrastructure-independent communication ecosystem for a post-dig
 User A -> XenHub A -> Encrypted Bundle -> XenRelay (Data Mule) -> XenHub B -> User B
 ```
 
+### XenHub (Desktop/Admin Hub)
+- **Hub-Blindness:** Stores encrypted blobs only
+- **Bundling:** Groups messages into encrypted bundles for physical transport
+- **Dashboard:** Track connected users, pending bundles, emergency alerts
+- **Local Management:** No cloud dependency
+
+![XenHub Dashboard UI](XenHub/software.ui/Dashboard.png)
+
 ### XenComm (Mobile App)
 - **Unique Identity:** HX-XXXXXXXX format
 - **Encryption:** AES-256 + RSA-2048
@@ -32,14 +40,6 @@ User A -> XenHub A -> Encrypted Bundle -> XenRelay (Data Mule) -> XenHub B -> Us
 - **Offline-First:** Designed for no internet dependency
 
 ![XenComm Home UI](XenComm/app.ui/home.jpg)
-
-### XenHub (Desktop/Admin Hub)
-- **Hub-Blindness:** Stores encrypted blobs only
-- **Bundling:** Groups messages into encrypted bundles for physical transport
-- **Dashboard:** Track connected users, pending bundles, emergency alerts
-- **Local Management:** No cloud dependency
-
-![XenHub Dashboard UI](XenHub/software.ui/Dashboard.png)
 
 ### XenRelay (Data Mule)
 Vehicles physically transport encrypted message bundles between hubs.
@@ -51,14 +51,6 @@ Adaptive routing selects the best delivery path based on cached network metadata
 
 ## UI Assets
 
-### XenComm UI (`XenComm/app.ui/`)
-Screenshots for the XenComm mobile app:
-- `home.jpg` - Main home dashboard
-- `Broadcast.jpg.jpg` - Emergency and government broadcast display
-- `Contact.jpg.jpg` - User contact list and management
-- `Others.jpg.jpg` - Additional utility screens
-- `Schedule.jpg.jpg` - Message scheduling and queue management
-
 ### XenHub UI (`XenHub/software.ui/`)
 Screenshots for the XenHub admin interface:
 - `Dashboard.png` - System overview and status
@@ -68,6 +60,14 @@ Screenshots for the XenHub admin interface:
 - `Queue.png` - Pending message and bundle queue
 - `Relay.png` - Data mule and vehicle status tracking
 - `User.png` - Connected users and activity management
+
+### XenComm UI (`XenComm/app.ui/`)
+Screenshots for the XenComm mobile app:
+- `home.jpg` - Main home dashboard
+- `Broadcast.jpg.jpg` - Emergency and government broadcast display
+- `Contact.jpg.jpg` - User contact list and management
+- `Others.jpg.jpg` - Additional utility screens
+- `Schedule.jpg.jpg` - Message scheduling and queue management
 
 ---
 
@@ -186,6 +186,10 @@ flutter run
 
 1. Tag commit, for example `xencomm-v1.0.0`
 2. Push tags to trigger build and upload to GitHub Releases
+
+### APK Release
+- The Android APK will be attached in the GitHub repository's **Releases** section.
+- Open the repo on GitHub, go to **Releases**, and download the latest `.apk` from there.
 
 ---
 
