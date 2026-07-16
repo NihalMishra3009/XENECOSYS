@@ -263,7 +263,7 @@ class _MetricCard extends StatelessWidget {
 
     return Card(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -304,7 +304,7 @@ class _MetricCard extends StatelessWidget {
                         '$animatedValue$suffix',
                         style: theme.textTheme.headlineSmall?.copyWith(
                           fontWeight: FontWeight.w800,
-                          fontSize: 24,
+                          fontSize: 20,
                         ),
                       );
                     },

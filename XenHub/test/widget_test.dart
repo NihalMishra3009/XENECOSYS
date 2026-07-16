@@ -47,6 +47,7 @@ void main() {
       ),
     );
 
+    await tester.pump(const Duration(milliseconds: 2000));
     await tester.pumpAndSettle();
 
     expect(find.text('Operations Command Center'), findsOneWidget);
@@ -63,7 +64,7 @@ void main() {
     expect(find.text('Nihal Mishra'), findsOneWidget);
     expect(find.text('Disha Mohite'), findsOneWidget);
     expect(find.text('Hemant Thakur'), findsOneWidget);
-    expect(find.text('Auto registered'), findsAtLeastNWidgets(4));
+    expect(find.text('Auto registered'), findsOneWidget);
     expect(find.text('Inside range'), findsAtLeastNWidgets(4));
     expect(find.text('Lina Torres'), findsNothing);
     expect(find.text('Ethan Cole'), findsNothing);

@@ -692,13 +692,13 @@ class _BundleList extends StatelessWidget {
                       ? 2
                       : 1;
 
-                  return GridView.count(
-                    crossAxisCount: columns,
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    crossAxisSpacing: 10,
-                    mainAxisSpacing: 10,
-                    childAspectRatio: columns == 1 ? 2.8 : 3.4,
+                    return GridView.count(
+                      crossAxisCount: columns,
+                      shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
+                      crossAxisSpacing: 10,
+                      mainAxisSpacing: 10,
+                    mainAxisExtent: columns == 1 ? 180 : 160,
                     children: queueBundles
                         .map((bundle) => _QueueBundleCard(bundle: bundle))
                         .toList(growable: false),
@@ -729,38 +729,42 @@ class _QueueBundleCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(18),
       ),
       padding: const EdgeInsets.all(12),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            bundle.destinationAddress,
-            style: theme.textTheme.titleMedium?.copyWith(
-              fontWeight: FontWeight.w700,
+      child: SingleChildScrollView(
+        physics: const NeverScrollableScrollPhysics(),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              bundle.destinationAddress,
+              style: theme.textTheme.titleMedium?.copyWith(
+                fontWeight: FontWeight.w700,
+              ),
             ),
-          ),
-          const SizedBox(height: 6),
-          Text(
-            '${bundle.messageCount} messages queued in this group',
-            style: theme.textTheme.bodyMedium?.copyWith(
-              color: theme.colorScheme.onSurfaceVariant,
+            const SizedBox(height: 6),
+            Text(
+              '${bundle.messageCount} messages queued in this group',
+              style: theme.textTheme.bodyMedium?.copyWith(
+                color: theme.colorScheme.onSurfaceVariant,
+              ),
             ),
-          ),
-          const SizedBox(height: 10),
-          Wrap(
-            spacing: 8,
-            runSpacing: 8,
-            children: bundle.messages
-                .map(
-                  (message) => Chip(
-                    visualDensity: VisualDensity.compact,
-                    materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                    avatar: const Icon(Icons.mail_outline, size: 13),
-                    label: Text('Message #${message.id}'),
-                  ),
-                )
-                .toList(growable: false),
-          ),
-        ],
+            const SizedBox(height: 10),
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              children: bundle.messages
+                  .map(
+                    (message) => Chip(
+                      visualDensity: VisualDensity.compact,
+                      materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                      avatar: const Icon(Icons.mail_outline, size: 13),
+                      label: Text('Message #${message.id}'),
+                    ),
+                  )
+                  .toList(growable: false),
+            ),
+          ],
+        ),
       ),
     );
   }
