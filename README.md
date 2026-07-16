@@ -71,7 +71,7 @@ Screenshots for the XenComm mobile app:
 
 ## Document
 
-- [PPT](ppt/Team%20Zephyr.pdf)
+- [Team Zephyr PPT](./ppt/Team%20Zephyr.pdf)
 - [Report](report/XenEcosys.pdf)
 - [Drive Folder](https://drive.google.com/drive/folders/13lk1G2cB8fbUps9Z_fOxAkLu1LRCEh_G)
 
