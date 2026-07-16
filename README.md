@@ -52,6 +52,24 @@ Adaptive routing selects the best delivery path based on cached network metadata
 
 ---
 
+## Debug
+
+- XenHub includes a built-in debug report button in the top bar.
+- It shows the current tab, API port, debug mode, platform, and timestamp.
+- XenComm uses Riverpod-driven state and can be tested with the provided widget test.
+
+---
+
+## Project Health
+
+- **Status:** Active and working
+- **Tests:** XenComm and XenHub widget suites pass after the latest fixes
+- **UI:** Screenshots, clickable previews, and YouTube links are in place
+- **Delivery:** APK build workflow is configured for GitHub Actions artifacts
+- **Docs:** README files, PPT, report, and drive links are organized
+
+---
+
 ## UI Assets
 
 ### XenHub UI (`XenHub/software.ui/`)
