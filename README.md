@@ -30,7 +30,7 @@ User A -> XenHub A -> Encrypted Bundle -> XenRelay (Data Mule) -> XenHub B -> Us
 - **Dashboard:** Track connected users, pending bundles, emergency alerts
 - **Local Management:** No cloud dependency
 
-![XenHub Dashboard UI](XenHub/software.ui/Dashboard.png)
+[![XenHub Dashboard UI](XenHub/software.ui/Dashboard.png)](https://youtu.be/j_z4tbJNfmw)
 
 ### XenComm (Mobile App)
 - **Unique Identity:** HX-XXXXXXXX format
@@ -39,7 +39,7 @@ User A -> XenHub A -> Encrypted Bundle -> XenRelay (Data Mule) -> XenHub B -> Us
 - **Sync:** Automatic upload/download when near XenHub
 - **Offline-First:** Designed for no internet dependency
 
-<img src="XenComm/app.ui/home.jpg" alt="XenComm Home UI" width="320">
+[<img src="XenComm/app.ui/home.jpg" alt="XenComm Home UI" width="320">](https://youtu.be/j_z4tbJNfmw)
 
 ### XenRelay (Data Mule)
 Vehicles physically transport encrypted message bundles between hubs.
