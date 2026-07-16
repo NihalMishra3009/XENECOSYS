@@ -1,8 +1,21 @@
 # XenHub
 
-XenHub is the desktop/admin hub for the XENECOSYS ecosystem. It manages local users, message queues, DTN simulation, bundle handling, and hub-side coordination without depending on central cloud infrastructure.
+XenHub is the desktop and admin hub for the XENECOSYS ecosystem. It provides local control over users, message queues, encrypted bundles, DTN simulation, and hub-side coordination without depending on central cloud infrastructure.
 
 [<img src="../XenHub/software.ui/Dashboard.png" alt="XenHub Dashboard UI" width="360">](https://youtu.be/j_z4tbJNfmw)
+
+## Project Description
+
+XenHub acts as the operational control center for offline and low-connectivity communication. It is designed to manage local hub activity, track connected users, bundle and protect messages, and visualize data transfer across delay-tolerant paths.
+
+The app focuses on:
+
+- local-first hub management
+- encrypted message queue handling
+- user tracking and coordination
+- DTN and relay visibility
+- offline communication support
+- desktop-oriented admin workflows
 
 ## What It Does
 
@@ -54,3 +67,13 @@ XenHub/
 - `software.ui/` contains UI screenshots for the hub interface.
 - `lib/src/` holds the app source code organized by feature.
 - Generated folders such as `build/` and `.dart_tool/` should not be committed.
+
+## APK Release
+
+The XenHub APK or desktop release will be published in the GitHub repository's **Releases** section when a new version is tagged and pushed.
+
+To download it:
+
+1. Open the repository on GitHub.
+2. Go to **Releases**.
+3. Download the latest XenHub build asset from the release page.
