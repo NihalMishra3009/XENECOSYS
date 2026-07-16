@@ -1,5 +1,8 @@
 # XENECOSYS: Communication Beyond Infrastructure
 
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-live-2ea44f?style=flat-square)](https://nihalmishra3009.github.io/XENECOSYS/)
+[![Build APK](https://img.shields.io/badge/GitHub%20Actions-APK%20build-blue?style=flat-square)](https://github.com/NihalMishra3009/XENECOSYS/actions)
+
 Decentralised, infrastructure-independent communication ecosystem for a post-digital world. It enables human connectivity when traditional networks fail.
 
 ---
