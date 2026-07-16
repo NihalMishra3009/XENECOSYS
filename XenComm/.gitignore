@@ -1,0 +1,31 @@
+# Flutter / Dart
+.dart_tool/
+.flutter-plugins-dependencies
+.pub/
+.pub-cache/
+build/
+coverage/
+
+# IDE / editor
+.idea/
+.vscode/
+*.iml
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Android / Gradle
+android/.gradle/
+android/local.properties
+
+# iOS / macOS
+ios/Pods/
+macos/Flutter/ephemeral/
+macos/Pods/
+
