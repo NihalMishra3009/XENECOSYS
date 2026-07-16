@@ -2,6 +2,8 @@
 
 XenHub is the desktop/admin hub for the XENECOSYS ecosystem. It manages local users, message queues, DTN simulation, bundle handling, and hub-side coordination without depending on central cloud infrastructure.
 
+[<img src="../XenHub/software.ui/Dashboard.png" alt="XenHub Dashboard UI" width="360">](https://youtu.be/j_z4tbJNfmw)
+
 ## What It Does
 
 - Tracks users connected to the hub

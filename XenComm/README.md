@@ -2,6 +2,8 @@
 
 XenComm is the mobile client for the XENECOSYS ecosystem. It is built as an offline-first Flutter app for local communication, emergency alerts, hub discovery, message sync, and DTN-style interaction when normal infrastructure is unavailable.
 
+[<img src="../XenComm/app.ui/home.jpg" alt="XenComm Home UI" width="360">](https://youtu.be/j_z4tbJNfmw)
+
 ## What It Does
 
 - Supports offline and low-connectivity messaging
