@@ -75,16 +75,6 @@ Screenshots for the XenComm mobile app:
 - [Report](report/XenEcosys.pdf)
 - [Drive Folder](https://drive.google.com/drive/folders/13lk1G2cB8fbUps9Z_fOxAkLu1LRCEh_G)
 
-## Links
-
-- [Google Drive Folder](https://drive.google.com/drive/folders/13lk1G2cB8fbUps9Z_fOxAkLu1LRCEh_G)
-- [GitHub Repository](https://github.com/NihalMishra3009/XENECOSYS.git)
-
-## Project Files
-
-- [Presentation PDF](ppt/Team%20Zephyr.pdf)
-- [Project Report](report/XenEcosys.pdf)
-
 ---
 
 ## Tech Stack
