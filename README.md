@@ -54,26 +54,26 @@ Adaptive routing selects the best delivery path based on cached network metadata
 
 ## Debug
 
-- XenHub includes a built-in debug report button in the top bar.
-- It shows the current tab, API port, debug mode, platform, and timestamp.
-- Test status:
-  - XenComm widget tests pass
-  - XenHub widget and API tests pass
-- Checklist:
-  - Debug report opens from the XenHub top bar
-  - APK build workflow runs from tagged pushes
-  - GitHub Pages site is configured
-  - README links for PPT, report, drive, and demo are in place
+- [x] Debug report button in the XenHub top bar
+- [x] Shows current tab, API port, debug mode, platform, and timestamp
+- [x] Test status:
+  - [x] XenComm widget tests pass
+  - [x] XenHub widget and API tests pass
+- [x] Checklist:
+  - [x] Debug report opens from the XenHub top bar
+  - [x] APK build workflow runs from tagged pushes
+  - [x] GitHub Pages site is configured
+  - [x] README links for PPT, report, drive, and demo are in place
 
 ---
 
 ## Project Health
 
-- **Status:** Active and working
-- **Tests:** XenComm and XenHub widget suites pass after the latest fixes
-- **UI:** Screenshots, clickable previews, and YouTube links are in place
-- **Delivery:** APK build workflow is configured for GitHub Actions artifacts
-- **Docs:** README files, PPT, report, and drive links are organized
+- [x] **Status:** Active and working
+- [x] **Tests:** XenComm and XenHub widget suites pass after the latest fixes
+- [x] **UI:** Screenshots, clickable previews, and YouTube links are in place
+- [x] **Delivery:** APK build workflow is configured for GitHub Actions artifacts
+- [x] **Docs:** README files, PPT, report, and drive links are organized
 
 ---
 
