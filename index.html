@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XENECOSYS</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b0f14;
+      --panel: #121820;
+      --text: #e5eef8;
+      --muted: #9bb0c7;
+      --accent: #6bd4ff;
+      --line: #223043;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at top, #122031 0, var(--bg) 45%);
+      color: var(--text);
+    }
+    .wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 56px 20px 72px;
+    }
+    .hero {
+      background: rgba(18, 24, 32, 0.92);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.35);
+    }
+    h1 { margin: 0 0 12px; font-size: clamp(2.2rem, 5vw, 4rem); }
+    p { color: var(--muted); line-height: 1.7; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+    }
+    .card h2 { margin: 0 0 8px; font-size: 1.05rem; }
+    .card p { margin: 0; font-size: .95rem; }
+    .links a {
+      color: var(--accent);
+      text-decoration: none;
+      display: inline-block;
+      margin-right: 14px;
+      margin-top: 10px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      margin-top: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>XENECOSYS</h1>
+      <p>Decentralized communication beyond infrastructure. XENECOSYS keeps people connected with offline-first messaging, local hubs, encrypted bundles, and delay-tolerant networking.</p>
+      <div class="links">
+        <a href="../README.md">Project README</a>
+        <a href="https://github.com/NihalMishra3009/XENECOSYS">GitHub Repo</a>
+        <a href="https://youtu.be/j_z4tbJNfmw">Demo Video</a>
+      </div>
+      <img src="../XenComm/app.ui/home.jpg" alt="XenComm Home UI">
+    </section>
+
+    <div class="grid">
+      <div class="card">
+        <h2>XenComm</h2>
+        <p>Offline-first mobile messaging app for local sync, emergency alerts, and hub discovery.</p>
+      </div>
+      <div class="card">
+        <h2>XenHub</h2>
+        <p>Desktop/admin hub for queues, bundles, users, and DTN coordination.</p>
+      </div>
+      <div class="card">
+        <h2>XenRelay</h2>
+        <p>Physical transport layer for encrypted bundles between hubs.</p>
+      </div>
+      <div class="card">
+        <h2>XenRoute</h2>
+        <p>Adaptive routing layer for choosing the best delivery path.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
