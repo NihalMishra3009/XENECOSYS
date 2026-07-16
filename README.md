@@ -92,6 +92,10 @@ XENECOSYS/
 |       `-- xencomm-release.yml
 |-- docs/
 |   `-- architecture-diagrams/
+|-- document/
+|-- ppt/
+|-- report/
+|-- videos/
 |-- XenComm/
 |   |-- app.ui/
 |   |   |-- Broadcast.jpg.jpg
