@@ -1,17 +1,54 @@
-# xenhub
+# XenHub
 
-A new Flutter project.
+XenHub is the desktop/admin hub for the XENECOSYS ecosystem. It manages local users, message queues, DTN simulation, bundle handling, and hub-side coordination without depending on central cloud infrastructure.
 
-## Getting Started
+## What It Does
 
-This project is a starting point for a Flutter application.
+- Tracks users connected to the hub
+- Manages message queues and encrypted bundles
+- Supports DTN simulation and relay visibility
+- Exposes API and SQLite-backed local data handling
+- Provides a desktop-style Flutter interface for admin workflows
 
-A few resources to get you started if this is your first Flutter project:
+## File Structure
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+```text
+XenHub/
+|-- README.md
+|-- XENHUB
+|-- software.ui/
+|   |-- Dashboard.png
+|   |-- DTN.png
+|   |-- Emergency broadcast.png
+|   |-- Emergency broadcast message Acknowledgment.png
+|   |-- Queue.png
+|   |-- Relay.png
+|   `-- User.png
+|-- lib/
+|   |-- main.dart
+|   `-- src/
+|       |-- app.dart
+|       |-- core/
+|       |   |-- api/
+|       |   |-- database/
+|       |   |-- navigation/
+|       |   `-- theme/
+|       |-- features/
+|       |   |-- dashboard/
+|       |   |-- dtn/
+|       |   |-- message_queue/
+|       |   |-- relay/
+|       |   `-- users/
+|       `-- ...
+|-- android/
+|-- windows/
+|-- test/
+|-- pubspec.yaml
+`-- analysis_options.yaml
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Notes
+
+- `software.ui/` contains UI screenshots for the hub interface.
+- `lib/src/` holds the app source code organized by feature.
+- Generated folders such as `build/` and `.dart_tool/` should not be committed.

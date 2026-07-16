@@ -1,20 +1,55 @@
 # XenComm
 
-A decentralized community platform that enables communication, coordinates relief efforts, shares trusted local information, maintains family safety status, and adapts automatically without any central infrastructure.
+XenComm is the mobile client for the XENECOSYS ecosystem. It is built as an offline-first Flutter app for local communication, emergency alerts, hub discovery, message sync, and DTN-style interaction when normal infrastructure is unavailable.
 
-## Project Layout
+## What It Does
 
-- `XenComm/` - main Flutter application
-- `XenComm/lib/` - app source code
-- `XenComm/assets/` - static assets and fonts
-- `XenComm/android/`, `XenComm/ios/`, `XenComm/web/`, `XenComm/linux/`, `XenComm/macos/`, `XenComm/windows/` - platform targets
-- `XenComm/test/` - tests
-- `XenComm/README.md` - app-specific documentation
-- `XenComm/ARCHITECTURE.md` - architecture notes
-- `XenComm/CHANGELOG.md` - change history
+- Supports offline and low-connectivity messaging
+- Handles emergency, medical, government, and normal message flows
+- Connects to nearby XenHub nodes for sync and relay
+- Includes DTN simulation and data-mule related views
+- Keeps the app organized around services, repositories, UI, and routing layers
 
-## Before Pushing To GitHub
+## File Structure
 
-- Commit only source files, assets, and docs.
-- Do not commit generated folders like `build/` or `.dart_tool/`.
-- Keep the top-level `README.md` and `.gitignore` in the repo root.
+```text
+XenComm/
+|-- README.md
+|-- LICENSE
+|-- app.ui/
+|   |-- home.jpg
+|   |-- Broadcast.jpg.jpg
+|   |-- Contact.jpg.jpg
+|   |-- Others.jpg.jpg
+|   `-- Schedule.jpg.jpg
+`-- Xencomm/
+    |-- README.md
+    |-- ARCHITECTURE.md
+    |-- CHANGELOG.md
+    |-- pubspec.yaml
+    |-- analysis_options.yaml
+    |-- assets/
+    |-- lib/
+    |   |-- core/
+    |   |-- dtn/
+    |   |-- models/
+    |   |-- providers/
+    |   |-- repositories/
+    |   |-- routing/
+    |   |-- services/
+    |   |-- simulation/
+    |   `-- ui/
+    |-- android/
+    |-- ios/
+    |-- linux/
+    |-- macos/
+    |-- web/
+    |-- windows/
+    `-- test/
+```
+
+## Notes
+
+- `app.ui/` contains UI screenshots for the mobile app.
+- `Xencomm/` is the actual Flutter project source.
+- Generated folders such as `build/` and `.dart_tool/` should not be committed.
