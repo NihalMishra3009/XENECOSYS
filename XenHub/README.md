@@ -72,10 +72,10 @@ XenHub/
 
 No XenHub release has been published yet.
 
-When a tagged version is released, the XenHub APK or desktop build will appear in the GitHub repository's **Releases** section.
+When a build is published, the XenHub APK or desktop build can be shared as a GitHub Actions artifact or packaged into a GitHub Release.
 
 To download it:
 
 1. Open the repository on GitHub.
-2. Go to **Releases**.
-3. Download the latest XenHub build asset from the release page.
+2. Go to **Actions** or **Releases**.
+3. Download the latest XenHub build asset if one is available.

@@ -193,11 +193,13 @@ flutter run
 **Automated via xencomm-release workflow:**
 
 1. Tag commit, for example `xencomm-v1.0.0`
-2. Push the tag to trigger a build and publish to GitHub Releases
+2. Push the tag to trigger an APK build in GitHub Actions
+3. Download the APK from the workflow artifacts
 
 ### APK Release
-- No release has been published yet.
-- When a tagged build is released, the Android APK will appear in the GitHub repository's **Releases** section.
+- The Android APK is uploaded as a GitHub Actions artifact.
+- Open the workflow run, go to **Artifacts**, and download `xencomm-apk`.
+- If you want a published GitHub Release later, create it manually from the tagged build.
 
 ---
 
